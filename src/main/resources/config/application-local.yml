@@ -1,16 +1,16 @@
 spring:
   shardingsphere:
     datasource:
-      names: ds0,ds1
-      ds0:
-        type: org.apache.commons.dbcp.BasicDataSource
+      names: db0,db1
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://192.168.1.101:3306/db0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
         username: root
         password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
-      ds1:
-        type: org.apache.commons.dbcp.BasicDataSource
-        url: jdbc:mysql://192.168.1.101:3306/ds1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:mysql://192.168.1.101:3306/db1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
         username: root
         password: root
         driver-class-name: com.mysql.cj.jdbc.Driver

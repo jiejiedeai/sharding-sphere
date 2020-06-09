@@ -7,6 +7,8 @@ server:
         name: JSESSIONID
 
 spring:
+  main:
+    allow-bean-definition-overriding: true #比较严格，所以呢，需要在配置文件添加一个属性
   application:
     name: sharding-jdbc
   profiles:

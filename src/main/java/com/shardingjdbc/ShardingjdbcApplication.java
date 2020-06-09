@@ -3,7 +3,6 @@ package com.shardingjdbc;
 import org.minbox.framework.api.boot.autoconfigure.swagger.annotation.EnableApiBootSwagger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
