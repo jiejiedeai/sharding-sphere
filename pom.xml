@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <ApiBoot-swagger.version>2.2.2.RELEASE</ApiBoot-swagger.version>
-        <sharding-sphere.version>4.1.1</sharding-sphere.version>
+        <sharding-sphere.version>4.1.0</sharding-sphere.version>
     </properties>
 
     <dependencyManagement>
@@ -36,12 +36,6 @@
     <dependencies>
 
         <!-- 分库分表 -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.shardingsphere</groupId>-->
-<!--            <artifactId>shardingsphere-jdbc-core</artifactId>-->
-<!--            <version>${sharding-sphere.version}</version>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-spring-boot-starter</artifactId>

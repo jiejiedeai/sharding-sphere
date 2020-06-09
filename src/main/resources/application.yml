@@ -13,13 +13,13 @@ spring:
       names: db0,db1
       db0:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://192.168.1.100:3306/db0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+        jdbc-url: jdbc:mysql://localhost:3306/db0?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
         username: root
         password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
       db1:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://192.168.1.100:3306/db1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+        jdbc-url: jdbc:mysql://localhost:3306/db1?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
         username: root
         password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,7 +28,7 @@ spring:
         order:
           actual-data-nodes: db$->{0..1}.order$->{0..1}
           key-generator:
-            colum: id #自增列的名称
+            column: id #自增列的名称
             type: SNOWFLAKE #自增列值生成器类型，缺省表示使用默认自增列值生成器。可使用用户自定义的列值生成器或选择内置类型：SNOWFLAKE/UUID
           database-strategy:
             inline:

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shardingjdbc.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.shardingjdbc.model.Order">
+        <id column="id" property="id"/>
+        <result column="order_id" property="orderId"/>
+        <result column="date_time" property="dateTime"/>
+    </resultMap>
+
+    <insert id="testShard" parameterType="com.shardingjdbc.model.Order">
+        insert into order (id,order_id,date_time),values(#{id},#{orderId},now())
+    </insert>
+
+</mapper>
