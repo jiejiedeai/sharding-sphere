@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <ApiBoot-swagger.version>2.2.2.RELEASE</ApiBoot-swagger.version>
-        <sharding-sphere.version>4.0.0-RC1</sharding-sphere.version>
+        <sharding-sphere.version>4.1.1</sharding-sphere.version>
     </properties>
 
     <dependencyManagement>
