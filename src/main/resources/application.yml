@@ -23,24 +23,23 @@ spring:
         username: root
         password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
-    rules:
-      sharding:
-        binding-tables: order #绑定表规则列表
-        broadcast-tables: config #广播表规则列表
-        tables:
-          order:
-            actual-data-nodes: db0.order$->{0..1},db1.order$->{0..1}
-            key-generator:
-              column: id #自增列的名称
-              type: SNOWFLAKE #自增列值生成器类型，缺省表示使用默认自增列值生成器。可使用用户自定义的列值生成器或选择内置类型：SNOWFLAKE/UUID
-            table-strategy:
-              inline:
-                sharding-column: order_id #分片列名称
-                algorithm-expression: order$->{order_id % 2} #分片算法表达式
-            database-strategy:
-              inline:
-                sharding-column: order_id #分片列名称
-                algorithm-expression: db$->{order_id % 2} #分片算法表达式
+    sharding:
+      binding-tables: order #绑定表规则列表
+      broadcast-tables: config #广播表规则列表
+      tables:
+        order:
+          actual-data-nodes: db0.order$->{0..1},db1.order$->{0..1}
+          key-generator:
+            column: id #自增列的名称
+            type: SNOWFLAKE #自增列值生成器类型，缺省表示使用默认自增列值生成器。可使用用户自定义的列值生成器或选择内置类型：SNOWFLAKE/UUID
+          table-strategy:
+            inline:
+              sharding-column: order_id #分片列名称
+              algorithm-expression: order$->{order_id % 2} #分片算法表达式
+          database-strategy:
+            inline:
+              sharding-column: order_id #分片列名称
+              algorithm-expression: db$->{order_id % 2} #分片算法表达式
     props:
       sql:
         show: true
