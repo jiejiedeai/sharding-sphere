@@ -26,4 +26,7 @@ public class Order implements Serializable {
     @ApiModelProperty(value = "订单id")
     private Integer orderId;
 
+    @ApiModelProperty(value = "创建时间")
+    private LocalDateTime dateTime;
+
 }
