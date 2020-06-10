@@ -9,7 +9,7 @@
     </resultMap>
 
     <insert id="testShard" parameterType="com.shardingjdbc.model.Order">
-        insert into `order` (id,order_id,date_time) values(#{id},#{orderId},now())
+        insert into `order` (order_id,date_time) values(#{orderId},now())
     </insert>
 
 </mapper>

@@ -20,8 +20,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     @Override
     public void testShard() {
         Order o = new Order();
-        o.setId(RandomUtils.nextInt())
-                .setOrderId(RandomUtils.nextInt());
+        o.setOrderId(RandomUtils.nextInt());
         orderMapper.testShard(o);
     }
 }
