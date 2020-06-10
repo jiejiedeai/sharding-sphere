@@ -48,12 +48,6 @@
             <artifactId>api-boot-starter-swagger</artifactId>
         </dependency>
 
-        <!-- spring session 对接redis 的必要连接-->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
-
         <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -150,12 +144,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <!--redis -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!-- common 配合上边redis连接池-->
